@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+{{title}}
+{% endblock %}
+
+{% block content %}
+<h1>{{title}}</h1>
+<hr>
+
+<h2>ภาพยนตร์/ละครที่ฉันชื่นชอบ 5 เรื่อง</h2>
+<ol>
+    {% for movie in movies %}
+    <li>{{ movie }}</li>
+    {% endfor %}
+</ol>
+
+{% endblock %}
