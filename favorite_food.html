@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask Template - {%block title%}{% endblock %}</title>
+</head>
+<body>
+  <a> href="#">Home</a>
+  <a> href="#">About</a>
+  <a> href="#">Favorite Food</a>
+
+  <h1>{{title}}</h1>
+  <h2>{{foods}}</h2>
+  <hr>
+  <h2>รายการอาหารที่ฉันโปรดปราน</h2>
+  <ol>
+    <li>{{food[0]}}</li>
+    <li>{{food[1]}}</li>
+    <li>{{food[2]}}</li>
+  </ol>
+  <h2>รายการอาหารที่ฉันโปรดปราน (for loop)</h2>
+  <ol>
+    {% for food in foods %}
+    <li><h3>{{ food }}</h3></li>
+    {% endfor %}
+  </ol>
+</body>
+</html>
